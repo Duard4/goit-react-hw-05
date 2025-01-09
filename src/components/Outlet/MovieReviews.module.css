@@ -1,0 +1,12 @@
+.list {
+	margin-top: 10px;
+	display: grid;
+	gap: 12px;
+}
+.author {
+	font-weight: 600;
+}
+.listItem {
+	display: grid;
+	gap: 8px;
+}

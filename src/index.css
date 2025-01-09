@@ -1,7 +1,7 @@
 /* reset */
 body {
-    font-family: sans-serif;
-    line-height: 1.5;
+	font-family: sans-serif;
+	line-height: 1.5;
 }
 
 h1,
@@ -11,17 +11,32 @@ h4,
 h5,
 h6,
 p {
-    margin: 0;
+	margin: 0;
 }
 
 ul,
 ol {
-    list-style: none;
-    margin: 0;
-    padding: 0;
+	list-style: none;
+	margin: 0;
+	padding: 0;
 }
 
 img {
-    display: block;
-    max-width: 100%;
+	display: block;
+	max-width: 100%;
+}
+
+a {
+	color: inherit;
+	text-decoration: none;
+}
+
+input[type="search"]::-webkit-search-cancel-button {
+	display: none;
+}
+
+input[type="search"] {
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	appearance: none;
 }

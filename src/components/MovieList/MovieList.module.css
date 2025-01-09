@@ -1,0 +1,15 @@
+.movieList {
+	display: grid;
+	gap: 12px;
+	font-size: 18px;
+	margin-top: 24px;
+	& li {
+		padding: 0.5em;
+		border-bottom: 1px solid gray;
+
+		& *:hover,
+		& *:focus {
+			color: var(--red);
+		}
+	}
+}
