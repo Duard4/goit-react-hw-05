@@ -1,0 +1,29 @@
+/* .link {
+	color: var(--color-white);
+	display: inline-block;
+	border: 1px solid var(--color-light);
+	border-radius: 4px;
+	padding: 12px 18px;
+	transition: background-color var(--animation-cubicBezie);
+} */
+
+.link:hover,
+.link:focus {
+	background-color: gainsboro;
+}
+
+.link {
+	letter-spacing: 0.06em;
+	width: fit-content;
+	display: flex;
+	gap: 4px;
+	margin-bottom: 15px;
+	border: 1px solid gray;
+	border-radius: 4px;
+	padding: 4px 8px;
+	transition: background-color 250ms cubic-bezier(0.075, 0.82, 0.165, 1);
+	color: black;
+	* {
+		margin-block: auto;
+	}
+}

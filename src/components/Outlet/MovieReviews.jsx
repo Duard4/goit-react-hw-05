@@ -1,12 +1,12 @@
 import { useParams } from "react-router-dom";
-import { useFetchMovieData } from "../../services/useFetchMovieData";
+import { useHttp } from "../../hooks/useHttp";
 import css from "./MovieReviews.module.css";
 
 const MovieReviews = () => {
 	const { id } = useParams();
-	const { data: reviews, error } = useFetchMovieData(id, "reviews");
+	const { data: reviews, error } = useHttp("reviews", id);
 	if (!reviews) return <p>Loading reviews...</p>;
-	if (error) return <p>Error: {error.message}</p>;
+	if (error) return <p>Error: {error}</p>;
 	if (reviews.results.length === 0) {
 		return <p>No reviews information available for this movie.</p>;
 	}

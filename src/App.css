@@ -26,3 +26,10 @@
 	clip: rect(0 0 0 0);
 	overflow: hidden;
 }
+
+.notFound {
+	font-size: 60px;
+	font-weight: 600;
+	color: gray;
+	text-align: center;
+}

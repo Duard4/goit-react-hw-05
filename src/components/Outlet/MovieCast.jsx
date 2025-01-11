@@ -1,13 +1,13 @@
 import { useParams } from "react-router-dom";
-import { useFetchMovieData } from "../../services/useFetchMovieData";
+import { useHttp } from "../../hooks/useHttp";
 import css from "./MovieCast.module.css";
 
 const MovieCast = () => {
 	const { id } = useParams();
-	const { data: credits, error } = useFetchMovieData(id, "credits");
+	const { data: credits, error } = useHttp("credits", id);
 
 	if (!credits) return <p>Loading cast...</p>;
-	if (error) return <p>Error: {error.message}</p>;
+	if (error) return <p>Error: {error}</p>;
 	if (credits.cast.length === 0) {
 		return <p>No cast information available for this movie.</p>;
 	}

@@ -9,14 +9,8 @@ const MovieList = ({ movies }) => {
 			{movies.map((movie) => {
 				return (
 					<li key={`${movie.id}`}>
-						<Link
-							to={`/movies/${movie.id}`}
-							state={{ from: location.pathname }}
-						>
+						<Link to={`/movies/${movie.id}`} state={location}>
 							{movie.title}
-							{/* <img
-								src={`https://media.themoviedb.org/t/p/w150_and_h225_bestv2${movie.poster_path}`}
-							/> */}
 						</Link>
 					</li>
 				);
